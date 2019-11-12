@@ -25,4 +25,26 @@ public class HomeController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public ModelAndView getListView(Locale locale, ModelAndView mv,
+			HttpServletRequest req, Authentication authentication) {
+		mv.setViewName("/home");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/top", method = RequestMethod.GET)
+	public ModelAndView getTopView(ModelAndView mv) {
+		mv.setViewName("/menu/top");
+		return mv;
+	}
+	@RequestMapping(value = "/left", method = RequestMethod.GET)
+	public ModelAndView getLeftView(ModelAndView mv) {
+		mv.setViewName("/menu/left");
+		return mv;
+	}
+	@RequestMapping(value = "/right", method = RequestMethod.GET)
+	public ModelAndView getRightView(ModelAndView mv) {
+		mv.setViewName("/menu/right");
+		return mv;
+	}
 }
